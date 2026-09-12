@@ -1,0 +1,11 @@
+theme = Otto
+shell-integration = fish
+window-decoration = true
+font-family = JetBrains Mono
+font-size =
+cursor-style = block
+background-blur = false
+background-opacity = 1
+
+# Otto GTK menus (Ghostty only)
+gtk-custom-css = ./otto-gtk.css

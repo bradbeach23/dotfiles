@@ -1,0 +1,81 @@
+/* Otto menus for Ghostty's GTK4/libadwaita interface.
+ * Load with Ghostty's gtk-custom-css option, not the global GTK stylesheet.
+ */
+@define-color otto_menu_bg #2c3746;
+@define-color otto_menu_fg #fefefe;
+@define-color otto_menu_muted #b5b6b6;
+@define-color otto_menu_border #46586f;
+@define-color otto_menu_hover #54424d;
+@define-color otto_menu_accent #f77067;
+
+popover.menu > contents {
+  background-color: @otto_menu_bg;
+  background-image: none;
+  color: @otto_menu_fg;
+  border: 1px solid @otto_menu_border;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+popover.menu > arrow {
+  background-color: @otto_menu_bg;
+  background-image: none;
+  border-color: @otto_menu_border;
+}
+
+popover.menu button.model {
+  background-color: transparent;
+  background-image: none;
+  color: @otto_menu_fg;
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  text-shadow: none;
+  min-height: 26px;
+  padding: 3px 9px;
+  margin: 1px 0;
+}
+
+popover.menu button.model:hover,
+popover.menu button.model:focus,
+popover.menu button.model:selected {
+  background-color: @otto_menu_hover;
+  color: @otto_menu_fg;
+}
+
+popover.menu button.model:active {
+  background-color: @otto_menu_accent;
+  color: @otto_menu_bg;
+}
+
+popover.menu button.model:focus-visible {
+  outline: 1px solid @otto_menu_accent;
+  outline-offset: -1px;
+}
+
+popover.menu button.model:disabled {
+  background-color: transparent;
+  color: @otto_menu_muted;
+  opacity: 0.5;
+}
+
+popover.menu button.model label,
+popover.menu button.model image {
+  color: inherit;
+}
+
+popover.menu button.model accelerator {
+  color: @otto_menu_muted;
+}
+
+popover.menu button.model:active accelerator {
+  color: @otto_menu_bg;
+}
+
+popover.menu separator {
+  background-color: @otto_menu_border;
+  background-image: none;
+  min-height: 1px;
+  margin: 4px 7px;
+}
